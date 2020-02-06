@@ -2,11 +2,6 @@
 import sys, time, random, os, socket, argparse, ipaddress, threading, multiprocessing
 from scapy.all import *
 
-#https://github.com/ep4sh/pyddos
-#https://github.com/EmreOvunc/Python-SYN-Flood-Attack-Tool/blob/master/SYN-Flood.py
-#https://github.com/vodkabears/synflood/blob/master/synflood.py
-
-
 # Arguments specification
 parser = argparse.ArgumentParser()
 #parser.add_argument("-d", "--dst_ip", help="Specify a target destination IP address")
