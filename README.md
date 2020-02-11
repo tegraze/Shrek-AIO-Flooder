@@ -17,7 +17,7 @@ It is not advised for usage within enterprise and unauthorized networks. There's
 * SYN Flood
 * ACK Flood
 * ACK Flood w/ previous tcp handshake
-* ~~UDP Flood~~
+* UDP Flood w/ PPS-optimized alternative
 * ~~GET & POST Floods~~
 * ICMP & Ping-of-Death Floods
 * ~~IKE Flood (ISAKMP)~~
