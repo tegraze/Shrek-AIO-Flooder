@@ -15,12 +15,12 @@ It is not advised for usage within enterprise and unauthorized networks. There's
 
 ## Usage
 Must be ran as superuser (scapy):\
-`python3 aio-shrek-flooder.py <destination ip> <options>`\
+`python3 aio-shrek-flooder.py <destination ip> <options>`
 
 #### Usage - examples:
 `sudo python3 aio-shrek-flooder.py 127.0.0.1 -r 0`-> basic usage with localhost as target and unlimited repeats.\
-`sudo python3 aio-shrek-flooder.py 127.0.0.1 -r 420 -s 192.168.0.123 -dp 80` -> repeat 420 times, spoofing source address to 192.168.0.123 and target port 80
-`sudo python3 aio-shrek-flooder.py 127.0.0.1 -r 0 -f --multithreaded` -> less CPU intensive, useful if other tools are being used for analysis, uses fragmentation of IP packets
+`sudo python3 aio-shrek-flooder.py 127.0.0.1 -r 420 -s 192.168.0.123 -dp 80` -> repeat 420 times, spoofing source address to 192.168.0.123 and target port 80\
+`sudo python3 aio-shrek-flooder.py 127.0.0.1 -r 0 -f --multithreaded` -> less CPU intensive, useful if other tools are being used for analysis, uses fragmentation of IP packets\
 
 ### Supported Flood/Fuzz:
 * SYN Flood
